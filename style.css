@@ -1,0 +1,84 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    overflow: hidden;
+}
+.trees{
+    height: 110vh;
+    width: 100%;
+    background-image: url(png-transparent-green-trees-under-blue-clouds-illustration-cartoon-landscape-painting-graphy-illustration-green-grass-white-grassland-mongolian-grassland-white-.png);
+    background-size: 100% 100%; 
+    position: absolute;
+    top: -144px; 
+}
+.track{
+    height: 60vh;
+    width: 800vw;
+    background-image: url(track.png);
+    background-repeat: repeat-x; 
+    position: absolute;
+    top: 80vh;
+    animation: carMove linear 13s infinite;
+
+}
+
+.car{
+    width: 400px;
+    height: 300px;
+    background-size: 60%;
+    background-image: url(image.png);
+    background-repeat: no-repeat;
+    position: absolute;
+    left: 44px;
+    bottom: -70px;
+    animation: shake linear .3s infinite;
+
+}
+
+
+.wheel1 img{
+    width: 70px;
+    position: relative;
+    left: 25px;
+    top: 86.6px;
+    animation: wheelRotation linear .20s infinite;
+}
+
+
+.wheel2 img{
+    width: 70px;
+    position: relative;
+    top: 22px;
+    left: 160px;
+    animation: wheelRotation linear .20s infinite;
+
+}
+
+@keyframes wheelRotation
+{
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes carMove
+{
+    100%{
+        transform: translateX(-400vw);
+    }
+}
+
+@keyframes shake
+{
+    0%{
+        transform: translateY(-5px);
+    }
+    50%{
+        transform: translateY(5px);
+    }
+    100%{
+        transform: translateY(-5px);
+    }
+}
